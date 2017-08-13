@@ -237,6 +237,10 @@ function _init() {
    *        $.AdminLTE.layout.fix()
    *        $.AdminLTE.layout.fixSidebar()
    */
+  //Hide all open sub nav menu list
+  $('.nav-second').on('show.bs.collapse', function () {
+      $('.nav-second.in').collapse('hide');
+  });
   $.AdminLTE.layout = {
     activate: function () {
       var _this = this;
@@ -252,6 +256,7 @@ function _init() {
       var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
       var window_height = $(window).height();
       var sidebar_height = $(".sidebar").height();
+      $(".navigation").css('min-height', (window_height - $('.main-footer').outerHeight()) + 10);
       //Set the min-height of the content and sidebar based on the
       //the height of the document.
       if ($("body").hasClass("fixed")) {

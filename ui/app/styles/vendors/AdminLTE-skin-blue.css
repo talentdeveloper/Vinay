@@ -6,7 +6,7 @@
   background-color: #3c8dbc;
 }
 .skin-blue .main-header .navbar .nav > li > a {
-  color: #ffffff;
+  color: #777;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
@@ -15,8 +15,8 @@
 .skin-blue .main-header .navbar .nav .open > a:hover,
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
-  background: rgba(0, 0, 0, 0.1);
-  color: #f6f6f6;
+  background-color: transparent;
+  color: #a2a2a2;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #ffffff;

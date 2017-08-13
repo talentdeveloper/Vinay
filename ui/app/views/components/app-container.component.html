@@ -1,8 +1,53 @@
 <header class="main-header"></header>
 <!--<main-sidebar class="main-sidebar"></main-sidebar>-->
 <div class="content-wrapper" fixed-height>
-	<div class="container-fluid container-main" ng-if="currentUser.id" ui-view>
-	</div>
+	<aside class="navigation" fixed-height>
+		<nav>
+			<ul class="nav" ng-show="currentUser.id" style="margin-top: 10px;">
+                <li>
+                    <a class="collapsed" data-toggle="collapse" aria-expanded="false" href="#newCase">
+                        <span class="hpad5" style="padding-right: 80px;">New Case</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="newCase" class="nav nav-second collapse" style="margin-left: 20px;">
+                        <li>
+                            <a href ng-click="createNewCase()">Empty Case</a>
+                        </li>
+                        <li class="divider" ng-if="templates && templates.length > 0"></li>
+                        <li ng-repeat="template in templates">
+                            <a href ng-click="createNewCase(template)">From
+                                {{template.name | uppercase}}
+                                template</a>
+                        </li>
+                    </ul>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="app.main({viewId: 'mytasks'})">My tasks
+                        <span class="badge alert-danger" style="margin-left: 90px;">{{myCurrentTasks.count}}</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="app.main({viewId: 'waitingtasks'})">Waiting tasks
+                        <span class="badge alert-danger" style="margin-left: 62px;">{{waitingTasks.count}}</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a href ui-sref="app.alert-list">
+                        Alerts
+                        <span class="badge alert-danger" style="margin-left: 105px;">{{(alertEvents.New.count || 0)  + (alertEvents.Updated.count || 0)}}</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="app.statistics">
+                        <i class="fa fa-bar-chart"></i> Statistics
+                    </a>
+                </li>
+            </ul>
+		</nav>
+	</aside>
+	<section class="content">
+		<div class="container-fluid" ng-if="currentUser.id" ui-view></div>
+	</section>
 </div>
 <footer class="main-footer">
 	<div class="container-fluid">
@@ -18,7 +63,7 @@
 			</span>
 		</div>
 		<div>
-			<strong><a href="http://www.thehive-project.org" target="_blank">TheHive Project</a> 2016-2017, <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">AGPL-V3</a></strong>
+			<strong><a href="http://www.thehive-project.org" target="_blank">Echolus</a></strong>
 		</div>
 	</div>
 </footer>

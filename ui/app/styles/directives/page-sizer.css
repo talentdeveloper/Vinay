@@ -7,8 +7,12 @@
 .page-sizer .page-sizer-label {
     flex: auto;
     white-space: nowrap;
+    color: #949ba2;
 }
 
 .page-sizer select {
     flex: auto;
+    background-color: transparent;
+    border-color: #616779;
+    color: #949ba2;
 }

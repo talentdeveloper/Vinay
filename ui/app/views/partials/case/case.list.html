@@ -64,7 +64,6 @@
 
                             <tbody>
                                 <tr ng-class="{true:'tr-warning'}[currentCase.flag]" ng-repeat="currentCase in $vm.list.values">
-
                                     <td class="p-0 bg-tlp-{{currentCase.tlp}} clickable" ng-click="$vm.filterByTlp(currentCase.tlp)"></td>
                                     <td>
                                         <div class="case-title">
@@ -115,7 +114,6 @@
                                 </tr>
                             </tbody>
                         </table>
-
                         <psearch control="$vm.list"></psearch>
 
                     </div>

@@ -1,11 +1,11 @@
 .flow-item {
     padding: 5px 10px;
-    background-color: #FFF;
-    border-bottom: 1px solid lightgrey;
+    background-color: transparent;
+    border-bottom: 1px solid #616779;
 }
 
 .flow-item:hover {
-    background-color: #F8F8F8;
+    background-color: #4f4f4f;
 }
 
 .flow-item .flow-item-breadcrumbs {

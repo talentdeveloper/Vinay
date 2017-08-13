@@ -1,5 +1,6 @@
 body {
     background-color: #ecf0f5;
+    color: #949ba2;
 }
 a, body {
     overflow: hidden;
@@ -9,6 +10,7 @@ a.noline {
 }
 body {
     overflow-y: auto;
+    color: #949ba2;
 }
 .navbar {
     position: fixed;
@@ -58,11 +60,12 @@ body {
     margin-right: 5px;
 }
 .empty-message {
-    background-color: #f5f5f5;
+    background-color: transparent;
     color: #AAA;
     font-size: 18px;
     text-align: center;
     padding: 40px;
+    border: 1px solid #616779;
 }
 
 .tpad50 {
@@ -80,6 +83,25 @@ body {
 pre.clearpre {
     background-color: transparent;
     border: 0px;
+}
+
+.navigation {
+	margin-top: 50px;
+	background-color: #24262d;
+	width: 200px;
+	min-height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.content {
+	margin-top: 60px;
+	margin-left: 200px;
+	position: relative;
+	padding: 30px;
+	background-color: #393b45;
 }
 
 .navbar-nav>li.hdivider {
@@ -258,7 +280,7 @@ ul.observable-reports-summary li {
 }
 
 .case-page .case-page-content {
-    background-color: #FFF;
+    background-color: #24262d;
     padding: 20px 10px 10px 10px;
 }
 
@@ -275,7 +297,7 @@ ul.observable-reports-summary li {
     height: auto;
     min-height: 5em;
     padding: 5px;
-    background-color: #fafafa;
+    background-color: #393b45;
 }
 .dropzone .dz-message {
     margin: 0 !important;
@@ -462,10 +484,10 @@ table.valigned td {
 }
 
 table tr.tr-warning {
-    background-color: #fcf8e3 !important;
+    background-color: #393b45 !important;
 }
 table tr.tr-warning>td {
-    background-color: #fcf8e3;
+    background-color: #393b45;
 }
 
 .box.box-navy {
@@ -482,12 +504,16 @@ table tr.tr-warning>td {
 
 tags-input .tags {
     border-radius: 0;
+    background-color: transparent;
+    border-color: #616779
 }
 
 tags-input.input-sm .tags {
     border-radius: 0;
     height: 30px;
     line-height: 30px;
+    background-color: transparent;
+  	border-color: #616779;
 }
 
 
@@ -497,8 +523,10 @@ tags-input.input-sm .tags.focused {
 }
 
 footer.main-footer {
+	position: relative;
     padding: 2px;
     line-height: 40px;
+	background-color: #24262d;
 }
 
 footer .footer-logo {
@@ -516,4 +544,31 @@ span.action-button {
 table tr td.task-actions span.action-button {
     width: 60px;
     display: inline-block;    
+}
+
+.md-editor {
+	display: block;
+	border: 1px solid #616779;
+}
+
+.md-editor > .md-header {
+	background: #393b45;
+}
+
+.md-editor > textarea {
+	background: #393b45;
+	border-top: 1px dashed #616779;
+	border-bottom: 1px dashed #616779;
+}
+
+.md-editor > textarea:focus {
+	background: #393b45;
+}
+
+hr {
+	border-top: 1px solid #616779;
+}
+
+.form-control, output {
+	color: #949ba2;
 }
